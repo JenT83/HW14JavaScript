@@ -14,18 +14,16 @@ submit.on("click", function() {
 
   // Select the input element and get the raw HTML node
   var inputElement = d3.select("#datetime");
-  // console.log(inputElement)
-  var stateSelect = d3.select("#statesel");
+  console.log(inputElement)
 
   // Get the value property of the input element
   var inputValue = inputElement.property("value");
-  // console.log(inputValue);
-  // console.log(tableData)
-  var stateValue = stateSelect.property("value");
+  console.log(inputValue);
+  console.log(tableData)
 
   // variable to hold user input
-  var inputFilter = tableData.filter((record) => { return (record.datetime === inputValue && record.state === stateValue)});
-  // console.log(inputFilter)
+  var inputFilter = tableData.filter(record => record.datetime === inputValue);
+  console.log(inputFilter)
 
   inputFilter.forEach(function(inputFilter){
     console.log(inputFilter);
